@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import Home from '../Pages/Home';
+import About from '../Pages/About';
 import Services from '../Pages/Services';
 import Showcase from '../Pages/Showcase';
 import { Route, Routes } from 'react-router-dom';
@@ -12,8 +13,9 @@ function Index() {
             <Header />
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="services" element={<Services />} />
-                <Route path="showcase" element={<Showcase />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/showcase" element={<Showcase />} />
             </Routes>
             <Footer />
         </div>

@@ -10,10 +10,10 @@ function Index() {
                     <div className="col-span-2 md:col-span-1 flex flex-col justify-center gap-5 order-2 md:order-1">
                         <p className='text-4xl font-bold'>Schedule for a Meeting!</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat esse neque laborum! Libero voluptate minima animi, aliquam aut saepe laudantium.</p>
-                        <button className="transition ease-in-out delay-150 bg-indigo-500 hover:-translate-x-1 rounded-full py-2 hover:scale-105 hover:bg-indigo-800 hover:text-white duration-300 w-10/12 self-center">
+                        <button className="transition ease-in-out delay-150 bg-indigo-500 hover:-translate-x-1 rounded-full py-2 hover:scale-105 hover:bg-indigo-800 hover:text-white duration-300 w-10/12 self-center text-black">
                             Schedule a Meeting
                         </button>
-                        <button className="transition ease-in-out delay-150 bg-white border border-indigo-500 hover:-translate-x-1 rounded-full py-2 hover:scale-105 hover:bg-indigo-800 hover:text-white duration-300 w-10/12 self-center">
+                        <button className="transition ease-in-out delay-150 bg-white border border-indigo-500 hover:-translate-x-1 rounded-full py-2 hover:scale-105 hover:bg-indigo-800 hover:text-white duration-300 w-10/12 self-center text-black">
                             Learn more
                         </button>
                     </div>
