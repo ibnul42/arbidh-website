@@ -15,6 +15,7 @@ function Index() {
         { name: 'Services', link: '/services' },
         { name: 'Showcase', link: '/showcase' },
         { name: 'About', link: '/about' },
+        { name: 'Blog', link: '/blog' },
         // { name: 'Contact us', link: '/contact' },
     ]
     return (
