@@ -273,7 +273,7 @@ function Index() {
         {
             heroAnimation.start({ y: '+100vh' })
         }
-    }, [heroInView, solutionInView, solutionInView2, solutionInView3, solutionInView4, fusionInView, fusionInView2, fusionInView3, fusionInView4, solutionInView, solutionInView2, solutionInView3, solutionInView4, heroAnimation, solutionAnimation, solutionAnimation2, solutionAnimation3, solutionAnimation4, fusionAnimation, fusionAnimation2, fusionAnimation3, fusionAnimation4, solutionAnimation, solutionAnimation2, solutionAnimation3, solutionAnimation4])
+    }, [heroInView, solutionInView, solutionInView2, solutionInView3, solutionInView4, fusionInView, fusionInView2, fusionInView3, fusionInView4, heroAnimation, solutionAnimation, solutionAnimation2, solutionAnimation3, solutionAnimation4, fusionAnimation, fusionAnimation2, fusionAnimation3, fusionAnimation4, patientAnimation, patientAnimation2, patientAnimation3, patientAnimation4, patientInView, patientInView2, patientInView3, patientInView4])
 
     return (
         <div>
@@ -460,7 +460,7 @@ function Index() {
 
                 {/* Reviews */}
                 <div className="py-5">
-                    <p class="text-center text-3xl">See What Our Customers Have to Talk About Us on Clutch</p>
+                    <p class="text-center text-3xl py-5">See What Our Customers Have to Talk About Us on Clutch</p>
                     <div className="px-10 bg-gray-100">
                         <p className='flex py-3 gap-1 font-semibold'>All Reviews 4.8
                             <span><img src="/images/icons/star.svg" className='w-4 h-4' alt="" /></span>

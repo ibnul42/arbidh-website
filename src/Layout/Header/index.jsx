@@ -14,6 +14,7 @@ function Index() {
         { name: 'Home', link: '/' },
         { name: 'Services', link: '/services' },
         { name: 'Showcase', link: '/showcase' },
+        { name: 'Pricing', link: '/pricing' },
         { name: 'About', link: '/about' },
         { name: 'Blog', link: '/blog' },
         // { name: 'Contact us', link: '/contact' },
