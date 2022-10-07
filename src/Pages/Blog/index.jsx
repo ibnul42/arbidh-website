@@ -42,7 +42,7 @@ const blogs = [
 function Blog() {
     return (
         <div>
-            <div className="max-w-7xl mx-auto px-3 py-10 grid grid-cols-1 md:grid-cols-4 gap-5">
+            <div className="max-w-7xl mx-auto px-3 py-10 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
                 {blogs.map((blog, index) => (
                     <Link to={`${blog.title}`} key={index} className="col-span-1 flex flex-col gap-2 border rounded-t-md shadow-sm hover:shadow-lg">
                         <div className="overflow-hidden rounded-md">

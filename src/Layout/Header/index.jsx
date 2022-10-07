@@ -3,11 +3,11 @@ import { NavLink } from 'react-router-dom';
 
 function Index() {
     const [open, setOpen] = useState(false);
-    const [activeId, setActiveId] = useState('/')
+    // const [activeId, setActiveId] = useState('/')
     const navLinkStyles = ({ isActive }) => {
         return {
-            color: isActive ? "#6366f1" : "black",
-            borderBottom: isActive ? "3px solid #6366f1" : null,
+            color: isActive ? "#ca2121" : "",
+            // borderBottom: isActive ? "3px solid #6366f1" : null,
         };
     };
     const links = [
@@ -20,25 +20,33 @@ function Index() {
         // { name: 'Contact us', link: '/contact' },
     ]
     return (
-        <div className="z-50">
+        <div className="z-40 bg-[#2f2e2e] py-1 md:py-3 text-white">
             <div className='max-w-7xl mx-auto px-3 flex justify-between'>
                 <div className="flex items-center my-5 md:my-auto cursor-pointer">
                     {/* <p className="font-bold text-2xl">Logo</p> */}
                     {/* <img src="/assets/ui_logo.svg" className='h-10 w-10' alt="logo" /> */}
-                    <p className="text-xl font-bold">Logo</p>
+                    <NavLink to='/' className="text-xl font-bold">
+                        <img src="/images/logo.png" className='h-8 w-20' alt="" />
+                    </NavLink>
+
                 </div>
-                <div className="h-[56px] w-16 absolute top-2 right-5 flex flex-col justify-around items-center rounded-lg cursor-pointer md:hidden" onClick={() => setOpen(!open)}>
-                    <div className={`w-12 h-2 rounded-2xl bg-black transition-all duration-500 ease-in ${open ? 'rotate-45 mt-7 mb-5' : ''}`}></div>
-                    <div className={`w-12 h-2 rounded-2xl bg-black transition-all duration-500 ease-in ${open ? 'hidden mb-5' : ''}`}></div>
-                    <div className={`w-12 h-2 rounded-2xl bg-black transition-all duration-500 ease-in ${open ? '-rotate-45 -mt-7 mb-5' : ''}`}></div>
+                <div className={`h-12 w-12 absolute top-4 right-5 flex flex-col justify-between items-center rounded cursor-pointer md:hidden border ${open ? 'p-2' : 'p-3'} z-50`} onClick={() => setOpen(!open)}>
+                    <div className={`w-full h-1 rounded-2xl bg-white transition-all duration-200 ease-in ${open ? 'rotate-45 mt-4 block' : ''}`}></div>
+                    <div className={`w-full h-1 rounded-2xl bg-white transition-all duration-200 ease-in ${open ? 'hidden mb-5' : ''}`}></div>
+                    <div className={`w-full h-1 rounded-2xl bg-white transition-all duration-200 ease-in ${open ? '-rotate-45 mb-3 inline-block' : ''}`}></div>
                 </div>
-                <ul className={`flex flex-col md:flex-row items-start md:items-center justify-center absolute left-0 md:static w-full md:w-auto transition-all duration-500 ease-in ${open ? 'opacity-100 top-[73px] bg-indigo-500 text-white' : 'opacity-0 md:opacity-100 top-[-500px] z-[-1]'} z-[-1] md:z-auto`}>
+                <ul className={`flex flex-col md:flex-row items-start md:items-center pt-10 md:pt-0 justify-start md:justify-center absolute left-0 md:static w-3/4 h-screen md:h-auto md:w-auto transition-all duration-500 ease-in ${open ? 'opacity-100 top-[73px] bg-[#2f2e2e]' : 'opacity-0 md:opacity-100 top-[73px] left-[-500px] z-[-1]'} z-[-1] md:z-auto`}>
                     {links.map((item, index) => (
-                        <NavLink to={item.link} key={index}
-                            className={`px-3 text-md font-semibold py-3 md:my-0 cursor-pointer uppercase text-[#1a1937] hover:text-[rgba(26,25,55,0.8)]`}
-                            // style={navLinkStyles}
-                            onClick={() => setActiveId(item.link)}
-                        >{item.name}</NavLink>
+                        <>
+                            <NavLink to={item.link} key={index}
+                                className={`px-3 text-md font-noramal md:font-semibold py-3 md:my-0 cursor-pointer uppercase hover:text-red-600 md:hover:text-gray-400`}
+                                style={navLinkStyles}
+                                onClick={() => setOpen(!open)}
+                            >{item.name}</NavLink>
+                            {links.length !== index + 1 && (
+                                <div className="border-t mx-3 w-3/4 md:hidden"></div>
+                            )}
+                        </>
                     ))}
                 </ul>
             </div>
