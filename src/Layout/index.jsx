@@ -9,6 +9,7 @@ import { Route, Routes } from 'react-router-dom';
 import Blog from '../Pages/Blog';
 import BlogDetails from '../Pages/Blog/BlogDetails';
 import Pricing from '../Pages/Pricing';
+import Contact from '../Pages/Contact';
 
 function Index() {
     return (
@@ -21,6 +22,7 @@ function Index() {
                 <Route path="/showcase" element={<Showcase />} />
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/blog" element={<Blog />} />
+                <Route path="/contact" element={<Contact />} />
                 <Route path="/blog/:title" element={<BlogDetails />} />
             </Routes>
             <Footer />

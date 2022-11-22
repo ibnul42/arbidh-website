@@ -17,7 +17,7 @@ function Index() {
         { name: 'Pricing', link: '/pricing' },
         { name: 'About', link: '/about' },
         { name: 'Blog', link: '/blog' },
-        // { name: 'Contact us', link: '/contact' },
+        { name: 'Contact us', link: '/contact' },
     ]
     return (
         <div className="z-40 bg-[#2f2e2e] py-1 md:py-3 text-white">
