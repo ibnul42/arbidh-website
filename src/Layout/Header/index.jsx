@@ -20,13 +20,13 @@ function Index() {
         { name: 'Contact us', link: '/contact' },
     ]
     return (
-        <div className="z-40 bg-[#2f2e2e] py-1 md:py-3 text-white">
+        <div className="z-40 bg-[#2f2e2e] py-0 md:py-3 text-white">
             <div className='max-w-7xl mx-auto px-3 flex justify-between'>
                 <div className="flex items-center my-5 md:my-auto cursor-pointer">
                     {/* <p className="font-bold text-2xl">Logo</p> */}
                     {/* <img src="/assets/ui_logo.svg" className='h-10 w-10' alt="logo" /> */}
                     <NavLink to='/' className="text-xl font-bold">
-                        <img src="/images/logo.png" className='h-8 w-20' alt="" />
+                        <img src="/assets/icons/logo.svg" className='h-10 md:h-16 w-20' alt="logo_bg" />
                     </NavLink>
 
                 </div>
