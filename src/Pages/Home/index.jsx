@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 // import schedule from '../../Assets/schedule.svg'
 
 function Index() {
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+  };
   return (
     <div>
       <div className="max-w-7xl mx-auto px-3 flex flex-col gap-8">
@@ -18,7 +21,8 @@ function Index() {
           </video>
           <Link
             to="/contact"
-            class="border border-indigo-500 hover:bg-indigo-600 hover:text-white transition-all rounded-xl py-3 px-2 md:px-5 font-semibold capitalize"
+            onClick={handleClick}
+            className="border border-indigo-500 hover:bg-indigo-600 hover:text-white transition-all rounded-xl py-3 px-2 md:px-5 font-semibold capitalize"
           >
             Contact us now
           </Link>
@@ -66,9 +70,9 @@ function Index() {
             <button className="transition ease-in-out delay-150 bg-indigo-500 hover:-translate-x-1 rounded-full py-2 hover:scale-105 hover:bg-indigo-800 hover:text-white duration-300 w-10/12 self-center text-black">
               Schedule a Consultation
             </button>
-            <button className="transition ease-in-out delay-150 bg-white border border-indigo-500 hover:-translate-x-1 rounded-full py-2 hover:scale-105 hover:bg-indigo-800 hover:text-white duration-300 w-10/12 self-center text-black">
+            <Link to="/contact" onClick={handleClick} className="transition ease-in-out delay-150 bg-white border border-indigo-500 hover:-translate-x-1 rounded-full py-2 hover:scale-105 hover:bg-indigo-800 hover:text-white duration-300 w-10/12 text-center self-center text-black">
               Learn more
-            </button>
+            </Link>
           </div>
           <div className="col-span-2 md:col-span-1 order-1 md:order-2">
             <img src="images/schedule.svg" className="w-8/12 mx-auto" alt="" />
@@ -99,12 +103,12 @@ function Index() {
               your app or website is finished.
             </p>
             <div className="grid grid-cols-2 gap-2">
-              <button className="col-span-1 transition ease-in-out delay-150 bg-white border border-indigo-500 rounded-full py-2 hover:scale-[1.02] hover:bg-indigo-800 hover:text-white duration-300 self-center">
+              <Link to="/about" onClick={handleClick} className="col-span-1 transition ease-in-out delay-150 bg-white border border-indigo-500 rounded-full py-2 hover:scale-[1.02] hover:bg-indigo-800 hover:text-white duration-300 self-center text-center">
                 More About Us
-              </button>
-              <button className="col-span-1 transition ease-in-out delay-150 bg-white border border-indigo-500 rounded-full py-2 hover:scale-[1.02] hover:bg-indigo-800 hover:text-white duration-300 self-center">
+              </Link>
+              <Link to="/!" className="col-span-1 transition ease-in-out delay-150 bg-white border border-indigo-500 rounded-full py-2 hover:scale-[1.02] hover:bg-indigo-800 hover:text-white duration-300 self-center text-center">
                 View Our Story
-              </button>
+              </Link>
             </div>
           </div>
         </div>
