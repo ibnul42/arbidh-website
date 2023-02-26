@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import { Carousel } from "react-responsive-carousel";
 // import schedule from '../../Assets/schedule.svg'
+import { PopupButton } from "react-calendly";
 
 function Index() {
   const handleClick = () => {
@@ -27,35 +27,6 @@ function Index() {
             Contact us now
           </Link>
         </div>
-        {/* slider */}
-        {/* <div className="my-5">
-          <Carousel
-            autoPlay={true}
-            infiniteLoop={true}
-            emulateTouch={true}
-            showThumbs={false}
-            showStatus={false}
-          >
-            <div className="max-h-[80vh] rounded-md overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1668961029030-787f7950864c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                className="object-cover"
-              />
-            </div>
-            <div className="max-h-[80vh] rounded-md overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1639578727199-038430702445?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-                className="object-cover"
-              />
-            </div>
-            <div className="max-h-[80vh] rounded-md overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1659350411244-5ec625d2fc94?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
-                className="object-cover"
-              />
-            </div>
-          </Carousel>
-        </div> */}
         {/* Schedule consultation */}
         <div className="grid grid-cols-2 gap-3">
           <p className="col-span-2 text-4xl font-bold text-center">
@@ -67,10 +38,24 @@ function Index() {
               website you want to create and we tell you how we can make that
               dream come true.
             </p>
-            <button className="transition ease-in-out delay-150 bg-indigo-500 hover:-translate-x-1 rounded-full py-2 hover:scale-105 hover:bg-indigo-800 hover:text-white duration-300 w-10/12 self-center text-black">
+            {/* <Link
+              to="/contact"
+              onClick={handleClick}
+              className="transition ease-in-out delay-150 bg-indigo-500 hover:-translate-x-1 rounded-full py-2 hover:scale-105 hover:bg-indigo-800 hover:text-white duration-300 w-10/12 self-center text-center text-black"
+            >
               Schedule a Consultation
-            </button>
-            <Link to="/contact" onClick={handleClick} className="transition ease-in-out delay-150 bg-white border border-indigo-500 hover:-translate-x-1 rounded-full py-2 hover:scale-105 hover:bg-indigo-800 hover:text-white duration-300 w-10/12 text-center self-center text-black">
+            </Link> */}
+            <PopupButton
+              url="https://calendly.com/appexp/30min"
+              rootElement={document.getElementById("root")}
+              text="Schedule a Consultation"
+              className="transition ease-in-out delay-150 bg-indigo-500 hover:-translate-x-1 rounded-full py-2 hover:scale-105 hover:bg-indigo-800 hover:text-white duration-300 w-10/12 self-center text-center text-black"
+            />
+            <Link
+              to="/contact"
+              onClick={handleClick}
+              className="transition ease-in-out delay-150 bg-white border border-indigo-500 hover:-translate-x-1 rounded-full py-2 hover:scale-105 hover:bg-indigo-800 hover:text-white duration-300 w-10/12 text-center self-center text-black"
+            >
               Learn more
             </Link>
           </div>
@@ -103,10 +88,18 @@ function Index() {
               your app or website is finished.
             </p>
             <div className="grid grid-cols-2 gap-2">
-              <Link to="/about" onClick={handleClick} className="col-span-1 transition ease-in-out delay-150 bg-white border border-indigo-500 rounded-full py-2 hover:scale-[1.02] hover:bg-indigo-800 hover:text-white duration-300 self-center text-center">
+              <Link
+                to="/about"
+                onClick={handleClick}
+                className="col-span-1 transition ease-in-out delay-150 bg-white border border-indigo-500 rounded-full py-2 hover:scale-[1.02] hover:bg-indigo-800 hover:text-white duration-300 self-center text-center"
+              >
                 More About Us
               </Link>
-              <Link to="/!" className="col-span-1 transition ease-in-out delay-150 bg-white border border-indigo-500 rounded-full py-2 hover:scale-[1.02] hover:bg-indigo-800 hover:text-white duration-300 self-center text-center">
+              <Link
+                to="/about"
+                onClick={handleClick}
+                className="col-span-1 transition ease-in-out delay-150 bg-white border border-indigo-500 rounded-full py-2 hover:scale-[1.02] hover:bg-indigo-800 hover:text-white duration-300 self-center text-center"
+              >
                 View Our Story
               </Link>
             </div>
