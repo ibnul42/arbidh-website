@@ -10,6 +10,7 @@ import Blog from "../Pages/Blog";
 import BlogDetails from "../Pages/Blog/BlogDetails";
 import Pricing from "../Pages/Pricing";
 import Contact from "../Pages/Contact";
+import ShowcaseService from "../Pages/Showcase/ShowcaseService";
 
 function Index() {
   const [open, setOpen] = useState(false);
@@ -23,6 +24,7 @@ function Index() {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/showcase" element={<Showcase />} />
+        <Route path="/showcase/:id" element={<ShowcaseService />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />

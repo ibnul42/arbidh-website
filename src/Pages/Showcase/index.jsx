@@ -155,12 +155,13 @@ function index() {
                     {item.title}
                   </p>
                   <p>{item.desc}</p>
-                  <a
-                    href={item.link}
+                  <Link
+                    to={`/showcase/${item.title}`}
+                    state={item}
                     className="text-blue-400 hover:text-orange-500 font-medium"
                   >
                     Read more
-                  </a>
+                  </Link>
                 </div>
               ))}
           </div>
