@@ -15,9 +15,10 @@ function Index() {
             controls
             autoPlay
             muted
+            loop
             className="w-full md:w-9/12 2xl:w-10/12"
           >
-            <source src="/assets/video/intro.mp4" />
+            <source src="/assets/video/intro2.mp4" />
           </video>
           <Link
             to="/contact"

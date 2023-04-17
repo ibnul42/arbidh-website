@@ -14,7 +14,7 @@ function Index({ open, setOpen }) {
     { name: "Services", link: "/services" },
     { name: "Showcase", link: "/showcase" },
     { name: "Pricing", link: "/pricing" },
-    { name: "About", link: "/about" },
+    // { name: "About", link: "/about" },
     { name: "Blog", link: "/blog" },
     { name: "Contact us", link: "/contact" },
   ];
@@ -26,8 +26,9 @@ function Index({ open, setOpen }) {
           {/* <img src="/assets/ui_logo.svg" className='h-10 w-10' alt="logo" /> */}
           <NavLink to="/" className="text-xl font-bold">
             <img
-              src="/assets/icons/logo.svg"
-              className="h-10 md:h-16 w-20"
+              src="/assets/icons/logo.png"
+              className="h-12 w-12"
+              // className="h-10 md:h-16 w-20"
               alt="logo_bg"
             />
           </NavLink>
